@@ -1,6 +1,6 @@
 languageCode = "en-us"
 title = "Jeff Weltman"
-baseurl = "https://blogdown.jeffweltman.com"
+baseurl = "http://blogdown.jeffweltman.com"
 theme = "BluestNight"
 
 paginate = 6             # Number of posts to show before paginating
