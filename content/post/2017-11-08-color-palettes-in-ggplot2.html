@@ -1,0 +1,67 @@
+---
+title: Color Palettes in ggplot2
+author: Jeff
+date: '2017-11-08'
+slug: color-palettes-in-ggplot2
+categories:
+  - R
+  - Visualization
+tags:
+  - ggplot2
+  - Visualization
+  - Data Viz
+  - R Markdown
+draft: yes
+---
+
+
+
+<p>ggplot2 is one of the most popular visualization packages in R for good reason. There are several books dedicated just to this package and its learning curve can be intimidating.</p>
+<p>Rather than attempt (foolhardily!) to give an in-depth tutorial to ggplot2, this post will show:</p>
+<ul>
+<li>one method of changing the <strong>colour palette</strong> <em>(remember that spelling for ggplot2, friends)</em></li>
+<li>one example of changing the theme color to better suit the chosen palette.</li>
+</ul>
+<p>These examples utilize NMHSA data (found <a href="https://datafiles.samhsa.gov/study-dataset/national-mental-health-services-survey-2015-n-mhss-2015-ds0001-nid17098">here</a>) to show the density of VA hospitals per state/region in ever 1,000 miles.</p>
+<p>Here’s a ggplot2 bars chart using the default palette options:</p>
+<pre class="r"><code>ggplot(size_and_count,aes(x=StateName, y=Density,fill=Region))+
+  geom_bar(aes(reorder(StateName,Density)), stat=&quot;identity&quot;)+
+  ggtitle(&quot;Number of VA Hospitals Per 1,000 Miles By State &quot;)+
+  xlab(&quot;State&quot;)+ylab(&quot;Number of VA Hospitals Per 1,000 Miles&quot;)+
+  coord_flip()</code></pre>
+<p><img src="/post/2017-11-08-color-palettes-in-ggplot2_files/figure-html/default-palette-1.png" width="768" /></p>
+<p>Hey, not bad!</p>
+<p>We’ll be using the <strong>scale_fill_brewer</strong> option to change our palette, an OOTB feature of ggplot2 which supports scales from colorbrewer.org.</p>
+<p>The following examples use different types of palettes.</p>
+<p>Here’s an example of a <em>diverging</em> palette:</p>
+<pre class="r"><code>ggplot(size_and_count,aes(x=StateName, y=Density,fill=Region))+
+  geom_bar(aes(reorder(StateName,Density)), stat=&quot;identity&quot;)+
+  ggtitle(&quot;Number of VA Hospitals Per 1,000 Miles By State &quot;)+
+  xlab(&quot;State&quot;)+ylab(&quot;Number of VA Hospitals Per 1,000 Miles&quot;)+
+  scale_fill_brewer(palette=&quot;Spectral&quot;)+
+  coord_flip()</code></pre>
+<p><img src="/post/2017-11-08-color-palettes-in-ggplot2_files/figure-html/diverging-palette-1.png" width="768" /></p>
+<p>This is a <em>qualitative</em> palette:</p>
+<pre class="r"><code>ggplot(size_and_count,aes(x=StateName, y=Density,fill=Region))+
+  geom_bar(aes(reorder(StateName,Density)), stat=&quot;identity&quot;)+
+  ggtitle(&quot;Number of VA Hospitals Per 1,000 Miles By State &quot;)+
+  xlab(&quot;State&quot;)+ylab(&quot;Number of VA Hospitals Per 1,000 Miles&quot;)+
+  scale_fill_brewer(palette=&quot;Pastel1&quot;)+
+  coord_flip()</code></pre>
+<p><img src="/post/2017-11-08-color-palettes-in-ggplot2_files/figure-html/qualitative-palette-1.png" width="768" /></p>
+<p>For the last example, I quickly realized the colors didn’t pop well on the gray plot area and white background. That first led me to tinker with the <strong>ggthemes</strong> package, then I further changed the axis colors to fit my canvas here.</p>
+<p>Here is an example of a sequential palette, with the above modifications:</p>
+<pre class="r"><code>theme_update(axis.text.x = element_text(colour=&quot;green&quot;),axis.text.y = element_text(colour=&quot;green&quot;))
+ggplot(size_and_count,aes(x=StateName, y=Density,fill=Region))+
+  geom_bar(aes(reorder(StateName,Density)), stat=&quot;identity&quot;)+
+  ggtitle(&quot;Number of VA Hospitals Per 1,000 Miles By State &quot;)+
+  xlab(&quot;State&quot;)+ylab(&quot;Number of VA Hospitals Per 1,000 Miles&quot;)+
+  scale_fill_brewer(palette=&quot;PuBuGn&quot;)+
+  theme_hc(bgcolor=&quot;darkunica&quot;)+
+  coord_flip()</code></pre>
+<p><img src="/post/2017-11-08-color-palettes-in-ggplot2_files/figure-html/sequential-palette-1.png" width="768" /></p>
+<p>That’s all there is to it! Granted, ggplot2 is incredibly customizable, but today we saw a quick way to easily change the color palette and/or theme to bring just a little something extra. See below for some reference links to dive in deeper in to colors and ggthemes with ggplot2.</p>
+<p>References:</p>
+<p><a href="http://ggplot2.tidyverse.org/reference/geom_bar.html">ggplot2 - bars charts</a></p>
+<p><a href="http://ggplot2.tidyverse.org/reference/scale_brewer.html">ggplot2 - colour scales from colorbrewer.org</a></p>
+<p><a href="https://cran.r-project.org/web/packages/ggthemes/vignettes/ggthemes.html">Introduction to ggthemes</a></p>

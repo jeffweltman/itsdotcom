@@ -1,0 +1,48 @@
+"Abbrev","VA_Count","StateName","SqMiles","Region","Density"
+"AL",4,"Alabama",50750,"South",0.0788177339901478
+"AR",7,"Arkansas",52075,"South",0.134421507441191
+"AZ",4,"Arizona",113642,"West",0.0351982541665933
+"CA",18,"California",155973,"West",0.115404589255833
+"CO",7,"Colorado",103730,"West",0.0674828882676178
+"CT",1,"Connecticut",4845,"Northeast",0.20639834881321
+"DE",1,"Delaware",1955,"South",0.51150895140665
+"FL",27,"Florida",53997,"South",0.500027779321073
+"GA",9,"Georgia",57919,"South",0.15538942315993
+"IA",9,"Iowa",55875,"Midwest",0.161073825503356
+"ID",5,"Idaho",82751,"West",0.0604222305470629
+"IL",24,"Illinois",55593,"Midwest",0.43170902811505
+"IN",7,"Indiana",35870,"Midwest",0.195149149707276
+"KS",2,"Kansas",81823,"Midwest",0.0244430050230375
+"KY",11,"Kentucky",39732,"South",0.276854928017719
+"LA",2,"Louisiana",43566,"South",0.0459073589496396
+"MA",10,"Massachusetts",7838,"Northeast",1.2758356723654
+"MD",1,"Maryland",9775,"South",0.10230179028133
+"ME",6,"Maine",30865,"Northeast",0.194394945731411
+"MI",12,"Michigan",56539,"Midwest",0.212242876598454
+"MN",3,"Minnesota",79617,"Midwest",0.0376803948905384
+"MO",8,"Missouri",68898,"Midwest",0.116113675288107
+"MS",4,"Mississippi",46914,"South",0.0852623950206761
+"MT",1,"Montana",145556,"West",0.00687020802989914
+"NC",8,"North Carolina",48718,"South",0.164210353462786
+"NE",6,"Nebraska",76878,"Midwest",0.0780457348005932
+"NH",2,"New Hampshire",8969,"Northeast",0.222990299921953
+"NJ",14,"New Jersey",7419,"Northeast",1.88704677180213
+"NM",3,"New Mexico",121365,"West",0.0247188233840069
+"NV",3,"Nevada",109806,"West",0.0273209114256052
+"NY",27,"New York",47224,"Northeast",0.57174318143317
+"OH",21,"Ohio",40953,"Midwest",0.5127829463043
+"OK",3,"Oklahoma",68679,"South",0.0436814746865854
+"OR",5,"Oregon",96003,"West",0.0520817057800277
+"PA",21,"Pennsylvania",44820,"Northeast",0.468540829986613
+"RI",2,"Rhode Island",1045,"Northeast",1.91387559808612
+"SC",6,"South Carolina",30111,"South",0.199262727906745
+"SD",3,"South Dakota",75898,"Midwest",0.0395267332472529
+"TN",2,"Tennessee",41220,"South",0.0485201358563804
+"TX",20,"Texas",261914,"South",0.076360942904923
+"UT",2,"Utah",82168,"West",0.0243403758154026
+"VA",3,"Virginia",39598,"South",0.0757614020910147
+"VT",2,"Vermont",9249,"Northeast",0.216239593469564
+"WA",6,"Washington",66582,"West",0.0901144453455889
+"WI",8,"Wisconsin",54314,"Midwest",0.147291674338108
+"WV",3,"West Virginia",24087,"South",0.124548511645286
+"WY",1,"Wyoming",97105,"West",0.0102981308892436
